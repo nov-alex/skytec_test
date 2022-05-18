@@ -1,17 +1,22 @@
 package org.test.manager;
 
 import org.test.dto.Clan;
+import org.test.storage.ClanStorage;
 
 public class ClanManager {
 
+    private final ClanStorage clanStorage;
 
-    public static Clan getClan(long clanId) {
-        return null;
+    public ClanManager(ClanStorage clanStorage) {
+        this.clanStorage = clanStorage;
     }
 
-    public static boolean saveClan(long clanId) {
-        return false;
+    public Clan getClan(long clanId) {
+        return clanStorage.getClan(clanId);
     }
 
+    public boolean saveClan(long clanId) {
+        return clanStorage.saveClan(clanId);
+    }
 
 }

@@ -12,7 +12,7 @@ public class ClanTracker {
     }
 
     public void trackerClanGold(long clanId, long userId, int gold) {
-        TrackerDto dto = new TrackerDto(clanId,userId,gold);
+        TrackerDto dto = new TrackerDto(clanId, userId, gold);
         trackerStorage.addTracker(dto);
     }
 }

@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Clan {
     private final long clanId;
     private String name;
-    private AtomicInteger gold;
+    private final AtomicInteger gold;
 
     public Clan(long clanId, String name, int gold) {
         this.clanId = clanId;

@@ -13,10 +13,15 @@ public class ClanStorage {
         this.storage = new HashMap<>();
     }
 
-    public void addClan(Clan clan){
+    public void addClan(Clan clan) {
         storage.put(clan.getClanId(), clan);
     }
-    public Clan getClan(long id){
+
+    public Clan getClan(long id) {
         return storage.get(id);
+    }
+
+    public boolean saveClan(long id) {
+        return storage.containsKey(id);
     }
 }
