@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Clan {
     private final long clanId;
-    private String name;
+    private volatile String name;
     private final AtomicInteger gold;
 
     public Clan(long clanId, String name, int gold) {
@@ -17,11 +17,11 @@ public class Clan {
         return clanId;
     }
 
-    public synchronized String getName() {
+    public String getName() {
         return name;
     }
 
-    public synchronized void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
